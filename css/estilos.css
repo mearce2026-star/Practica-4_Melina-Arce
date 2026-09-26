@@ -1,0 +1,153 @@
+*{
+    margin:0;padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#9ae6cf;
+    text-align:center; 
+    overflow-x:hidden;
+}
+
+.hero{
+    background:#24053E;
+    color:#fff;
+    padding:40px 20px 160px;
+    position:relative;
+}
+
+.hero::after{
+    content:'';
+    position:absolute;
+    left:0;right:0;
+    bottom:-1px;
+    height:80px;
+    background:#72ebcc;
+    border-radius:0 0 50% 50% / 0 0 100% 100%;
+    transform:scaleX(1.5);
+}
+
+.hero h1{
+    font-size:clamp(28px,5vw,50px);
+    margin:20px auto;
+    max-width:600px;
+}
+
+.hero h3{
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+
+.btn-verde{
+    background:#44FFA1;
+    color:#24053E;
+    padding:12px 25px;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:4px;
+}
+
+.hero img{
+    width:min(280px,80%);
+    margin:30px auto -220px;
+    display:block;
+    position:relative;
+    z-index:2;
+}
+
+.features{
+    background:#72ebcc;
+    padding:220px 5% 120px;
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+    position:relative;
+}
+
+.features::after{
+    content:'';
+    position:absolute;
+    left:0;right:0;
+    bottom:-1px;
+    height:80px;
+    background:#72ebcc;
+    border-radius:0 0 50% 50% / 0 0 100% 100%;
+    transform:scaleX(1.5)
+}
+
+.columna1,.columna2,.columna3{
+    flex:1;min-width:250px;
+    max-width:350px
+}
+
+.features h3{
+    color:#24053E;
+    margin-bottom:10px
+}
+
+.features p{
+    line-height:1.6;
+    font-size:14px;
+}
+
+.testimonial{
+    padding:80px 5%;
+    display:flex;align-items:center;
+    justify-content:center;
+    flex-wrap:wrap; 
+    gap:0;
+}
+
+.testimonial img{
+    Width:280px;
+    height:280px;
+    border-radius:50%;
+    object-fit:cover
+}
+
+.testimonial .card{
+    background:#24053E;
+    color:#aaf1f1;
+    padding:40px;
+    max-width:550px;
+    margin-left:-60px;
+    margin-top:100px;
+    text-align:left;
+}
+
+.testimonial .card h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.testimonial .card p{
+    line-height:1.6;
+    margin-bottom:20px;
+    font-size:14px;
+}
+
+footer{
+    padding:30px; 
+    font-weight:bold; opacity:.6
+}
+
+@media(max-width:768px){
+  
+  .features{
+    flex-direction:column;
+    align-items:center
+}
+  .testimonial{
+    flex-direction:column;
+    text-align:center
+}
+  .testimonial .card{
+    margin:-40px 0 0 0;
+    text-align:center
+}
+  .hero img{margin-bottom:-150px}
+}
+
